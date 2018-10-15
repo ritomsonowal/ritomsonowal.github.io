@@ -93,12 +93,15 @@ body {
 }
 
 #about .row {
-    display: flex;
 	align-items: center;
 }
 
+#about #ritom {
+	text-align: center;
+}
+
 #about img {
-    float: right;
+    /* float: right; */
     display: inline-block;
     width: 150px;
     height: 150px;
@@ -159,7 +162,6 @@ body {
 
 .projects .row {
     padding: 10px 40px;
-    display: flex;
 	align-items: center;
 }
 
