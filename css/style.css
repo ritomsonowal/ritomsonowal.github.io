@@ -14,7 +14,7 @@ body {
 }
 
 .bg {
-    background-image: url('../images/IMG_20180616_131118.jpg');
+    background-image: url('../images/bae80a1.jpg');
     height: 100%;
     margin-top: -210px;
     background-position: center;
@@ -22,9 +22,9 @@ body {
     background-size: cover;
 }
 
-h2 {
+.bg h2 {
     font-family: 'IBM Plex Sans', sans-serif;
-    color: black;
+    color: #ffffff;
     text-align: center;
     font-size: 3rem;
     font-weight: 550;
@@ -33,6 +33,16 @@ h2 {
 }
 
 /* Navbar */
+.bg .navbar {
+    font-family: 'Roboto', sans-serif;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background-color: transparent;
+    color: #ffffff;
+    border: none;
+    transition: all 0.3s;
+}
+
 .navbar {
     font-family: 'Roboto', sans-serif;
     padding-top: 25px;
@@ -43,13 +53,19 @@ h2 {
     transition: all 0.3s;
 }
 
+.bg .navbar a {
+    color: #ffffff;
+}
+
 .navbar a {
-        color: black;
+    color: black;
 }
 
 .navbar a:hover {
-        color: black !important;
-        /* opacity: 0.5; */
+    background-color: transparent !important;
+    text-decoration: none;
+    /* color: black !important;
+    opacity: 0.5; */
 }
 
 .navbar.compressed {
@@ -81,11 +97,11 @@ h2 {
 	align-items: center;
 }
 
-.content img {
+#about img {
     float: right;
     display: inline-block;
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     object-fit: cover;
 }
@@ -118,6 +134,38 @@ h2 {
     padding: 80px;
     margin-left: 60px;
     margin-right: 60px;
+}
+
+.projects {
+    padding: 30px;
+    text-align: center;
+}
+
+.projects h1 {
+    font-size: 4rem;
+    font-weight: 550;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+}
+
+.projects img {
+    overflow: hidden;
+    width: 80%;
+}
+
+.projects .row h3{
+    text-transform: uppercase;
+}
+
+.projects .row {
+    padding: 10px 40px;
+    display: flex;
+	align-items: center;
+}
+
+.projects a {
+    color: #2F4F4F;
+    text-decoration: none;
 }
 
 /* footer */
