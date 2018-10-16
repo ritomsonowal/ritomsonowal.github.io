@@ -120,6 +120,14 @@ body {
     text-align: center;
 }
 
+#software a {
+    color: #C0C0C0 !important;
+}
+
+#software a:hover {
+    color: #ffffff !important;
+}
+
 .info {
     font-size: 14px;
     letter-spacing: 1.5px;
@@ -139,8 +147,8 @@ body {
     margin-right: 60px;
 }
 
-.projects {
-    padding: 30px;
+.projects, .contact {
+    padding: 35px;
     text-align: center;
 }
 
@@ -170,17 +178,45 @@ body {
     text-decoration: none;
 }
 
+.contact h1 {
+    font-size: 4rem;
+    font-weight: 550;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+}
+
+.contact-body #mail {
+    color: black;
+}
+
+.contact-body .fa {
+    width: 30px;
+}
+
 /* footer */
 .footer {
-    padding: 40px 40px 20px;
+    padding: 40px 40px 10px;
+}
+
+.footer a {
+    color: #ffffff;
 }
 
 .footer #credits {
     margin-top: 50px;
 }
 
+.footer #credits p {
+    margin-bottom: 0px !important;
+}
+
 #socialMedia {
     padding: 30px;
+}
+
+#socialMedia a {
+    color: #19191A;
+    text-decoration: none;
 }
 
 #socialMedia a:hover{
