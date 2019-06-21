@@ -49,7 +49,6 @@ $(document).ready(function() {
             });
 
             let url2 = "https://github-contributions-api.now.sh/v1/" + "ritomsonowal";
-            console.log(url2);
             $.ajax({
                 url: url2,
                 success: displayCount,
@@ -60,7 +59,6 @@ $(document).ready(function() {
                 var languages = [];
 
                 for (let repo of repos) {
-                    console.log(repo);
                     if (repo.language && !languages.includes(repo.language)) {
                         languages.push(repo.language);
                     }
@@ -77,17 +75,16 @@ $(document).ready(function() {
                     duration: 1200
                 }
                 );
-                console.log("Happening");
-                $("#repos span").append( $("<p>public repositories</p>") );
+                $("#repos span").append( $("<p>Public Repositories</p>") );
             }
 
             function displayError(err) {
-                $("#repos").append($("<li>Error</li>"));
+                $("#repos").append($("<li>Unnavailable at the moment</li>"));
+                $("#languages").append($("<li>Unnavailable at the moment</li>"));
             }
 
             function displayCount(contributions) {
                 var count = 0;
-                // console.log("Count no of commits");
                 for (let i of contributions.years) {
                     count = count + i.total;
                 }
@@ -100,8 +97,7 @@ $(document).ready(function() {
                     duration: 1200
                 }
                 );
-                $("#contributions span").append( $("<p>Total contributions</p>") );
-                // document.getElementById("count").innerHTML = count;
+                $("#contributions span").append( $("<p>Total Contributions</p>") );
             }
 
             function displayError2(err) {
@@ -109,36 +105,3 @@ $(document).ready(function() {
             }
 
 });
-
-// $(document).ready(function(){
-//     let url2 = "https://github-contributions-api.now.sh/v1/" + "ritomsonowal";
-//     console.log(url2);
-//     $.ajax({
-//         url: url2,
-//         success: displayCount,
-//         error: displayError2
-//     });
-//
-//     function displayCount(contributions) {
-//         var count = 0;
-//         // console.log("Count no of commits");
-//         for (let i of contributions.years) {
-//             count = count + i.total;
-//         }
-//
-//         $('#count').animateNumber( {
-//             number: count
-//         },
-//         {
-//             easing: 'swing',
-//             duration: 1200
-//         }
-//         );
-//         $("#contributions span").append( $("<p>Total contributions</p>") );
-//         // document.getElementById("count").innerHTML = count;
-//     }
-//
-//     function displayError2(err) {
-//         $("#count").append($("<span>Unavailable at the moment.</span>"));
-//     }
-// });
