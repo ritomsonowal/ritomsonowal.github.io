@@ -28,3 +28,33 @@ $(document).ready(function(){
     }
   });
 });
+
+// AnimateNumber
+
+
+$(document).ready(function() {
+
+    $("#repos").empty();
+            let url = "https://api.github.com/users/" + "ritomsonowal/repos";
+            $.ajax({
+                url,
+                success: displayRepos,
+                error: displayError
+            });
+            function displayRepos(repos) {
+                var count = 0;
+                $('#repos').animateNumber( {
+                    number: repos.length
+                },
+                {
+                    easing: 'swing',
+                    duration: 1200
+                }
+                );
+            }
+
+            function displayError(err) {
+                $("#repos").append($("<li>Error</li>"));
+            }
+
+        });
