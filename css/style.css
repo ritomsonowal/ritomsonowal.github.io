@@ -141,10 +141,29 @@ body {
     text-decoration: none;
 }
 
-#blog {
-    padding: 80px;
+#stats {
+    padding: 50px;
     margin-left: 60px;
     margin-right: 60px;
+    margin-bottom: -10px;
+}
+
+#stats h2{
+    text-align: center;
+    letter-spacing: 7px;
+    font-weight: 520;
+}
+
+#stats #repos, #languages, #contributions {
+    font-size: 20px;
+    padding: 35px;
+    text-align: center;
+}
+
+#stats #repo-num, #count, #repo-lang {
+    font-weight: 470;
+    font-size: 30px;
+    text-align: center;
 }
 
 .projects, .contact {
